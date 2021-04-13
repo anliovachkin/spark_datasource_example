@@ -28,6 +28,7 @@ class PostgresqlSpec extends AnyFlatSpec with TestContainerForAll {
       .option("user", postgresServer.username)
       .option("password", postgresServer.password)
       .option("tableName", testTableName)
+      .option("partitionSize", "10")
       .load()
       .show()
 
